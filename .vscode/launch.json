@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "Launch Program",
-            "program": "lib/main.dart",
+            "program": "lib/",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
