@@ -5,7 +5,7 @@ void main() {
   runApp(MyApp());
 }
 
-class homepage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   final int days = 30;
   final String isname = "Panav";
   @override
