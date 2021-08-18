@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/pages/utils/routes.dart';
+import 'package:flutter_practice/utils/routes.dart';
 
 class RegPage extends StatelessWidget {
   @override
