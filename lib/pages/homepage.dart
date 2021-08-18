@@ -13,7 +13,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Panav's First App"),
+        title: Text(
+          "Catalog App",
+        ),
+        centerTitle: true,
       ),
       body: Center(
         child: Container(
