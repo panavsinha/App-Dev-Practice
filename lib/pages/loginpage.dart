@@ -1,5 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/pages/register.dart';
 import 'package:flutter_practice/utils/routes.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -26,103 +29,128 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.white,
-      child: SingleChildScrollView(
-        child: Form(
-          key: _formKey,
-          child: Column(
-            children: [
-              SizedBox(height: 15.0),
-              Image.asset(
-                "assets/images/hey.png",
-                fit: BoxFit.cover,
-                //height: 1000,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text("Welcome $name",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  )),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 16.0, horizontal: 32.0),
-                child: Column(
-                  children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                        hintText: "Enter Username",
-                        labelText: "Username",
+    return GestureDetector(
+      onTap: () {
+        FocusScopeNode currentFocus = FocusScope.of(context);
+        if (!currentFocus.hasPrimaryFocus) {
+          currentFocus.unfocus();
+        }
+      },
+      child: Material(
+        color: Colors.white,
+        child: SingleChildScrollView(
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                SizedBox(height: 15.0),
+                Image.asset(
+                  "assets/images/hey.png",
+                  fit: BoxFit.cover,
+                  //height: 1000,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("Welcome $name",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    )),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 16.0, horizontal: 32.0),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        decoration: InputDecoration(
+                          hintText: "Enter Username",
+                          labelText: "Username",
+                        ),
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "Enter a valid input";
+                          }
+                          return null;
+                        },
+                        onChanged: (value) {
+                          name = value;
+                          setState(() {});
+                        },
                       ),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return "Enter a valid input";
-                        }
-                        return null;
-                      },
-                      onChanged: (value) {
-                        name = value;
-                        setState(() {});
-                      },
-                    ),
-                    TextFormField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        hintText: "Enter Password",
-                        labelText: "Password",
+                      TextFormField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          hintText: "Enter Password",
+                          labelText: "Password",
+                        ),
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "Enter a valid input";
+                          } else if (value.length < 8) {
+                            return "Password length must be at least 8 characters";
+                          }
+                          return null;
+                        },
                       ),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return "Enter a valid input";
-                        } else if (value.length < 8) {
-                          return "Password length must be at least 8 characters";
-                        }
-                        return null;
-                      },
-                    ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    Material(
-                      color: Colors.deepPurple,
-                      borderRadius:
-                          BorderRadius.circular(changeButton ? 20 : 10),
-                      child: InkWell(
-                        onTap: () => moveToHome(context),
-                        child: AnimatedContainer(
-                          duration: Duration(seconds: 1),
-                          width: changeButton ? 42 : 110,
-                          height: 40,
-                          alignment: Alignment.center,
-                          child: changeButton
-                              ? Icon(Icons.done, color: Colors.white)
-                              : Text(
-                                  "Login",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Material(
+                        color: Colors.deepPurple,
+                        borderRadius:
+                            BorderRadius.circular(changeButton ? 20 : 10),
+                        child: InkWell(
+                          onTap: () => moveToHome(context),
+                          child: AnimatedContainer(
+                            duration: Duration(seconds: 1),
+                            width: changeButton ? 42 : 110,
+                            height: 40,
+                            alignment: Alignment.center,
+                            child: changeButton
+                                ? Icon(Icons.done, color: Colors.white)
+                                : Text(
+                                    "Login",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
                                   ),
-                                ),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Text(
-                  "If you don't have an account, click on Register",
-                  style: TextStyle(
-                    fontSize: 15.0,
+                    ],
                   ),
-                  textAlign: TextAlign.center,
                 ),
-              ),
-            ],
+                RichText(
+                  text: TextSpan(
+                    text: "If you don't have an account, click on ",
+                    style: GoogleFonts.lato(
+                      fontSize: 15.0,
+                      color: Colors.black,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: "Register",
+                        style: GoogleFonts.lato(
+                          decoration: TextDecoration.underline,
+                          color: Colors.deepPurple,
+                          fontSize: 15.0,
+                        ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () async {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => RegPage()));
+                          },
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
