@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter_practice/pages/loginpage.dart';
+//import 'package:flutter/gestures.dart';
+//import 'package:flutter_practice/pages/loginpage.dart';
 import 'package:flutter_practice/utils/routes.dart';
 
 class RegPage extends StatefulWidget {
