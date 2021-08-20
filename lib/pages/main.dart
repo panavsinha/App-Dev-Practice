@@ -4,7 +4,7 @@ import 'package:flutter_practice/pages/loginpage.dart';
 import 'package:flutter_practice/pages/register.dart';
 import 'package:flutter_practice/utils/routes.dart';
 import 'package:flutter_practice/widgets/themes.dart';
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
