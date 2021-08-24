@@ -13,7 +13,9 @@ class HomeDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyThemes.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -28,8 +30,8 @@ class HomeDetail extends StatelessWidget {
                   backgroundColor:
                       MaterialStateProperty.all(MyThemes.darkBluish),
                   shape: MaterialStateProperty.all(StadiumBorder())),
-              child: "Buy".text.xl.make(),
-            ).wh(90, 45),
+              child: "Add to Cart".text.xl.make(),
+            ).wh(119, 45),
           ],
         ).p32(),
       ),
@@ -39,25 +41,34 @@ class HomeDetail extends StatelessWidget {
           children: [
             Hero(
               tag: Key(catalog.id.toString()),
-              child: Image.network(catalog.image).card.roundedLg.make(),
+              child: Image.network(
+                catalog.image,
+              ).box.p12.make().card.roundedLg.make(),
             ).h32(context),
             Expanded(
-              child: VxArc(
-                height: 30,
-                arcType: VxArcType.CONVEY,
-                edge: VxEdge.TOP,
-                child: Container(
-                  color: Colors.white,
-                  width: context.screenWidth,
-                  child: Column(
-                    children: [
-                      catalog.name.text.lg.bold
-                          .color(MyThemes.darkBluish)
-                          .xl2
-                          .make(),
-                      catalog.desc.text.caption(context).bold.make(),
-                    ],
-                  ).py64(),
+              child: Scaffold(
+                backgroundColor: MyThemes.creamColor,
+                body: SingleChildScrollView(
+                  child: VxArc(
+                    height: 30,
+                    arcType: VxArcType.CONVEY,
+                    edge: VxEdge.TOP,
+                    child: Container(
+                      color: Colors.white,
+                      width: context.screenWidth,
+                      child: Column(
+                        children: [
+                          catalog.name.text.lg.bold
+                              .color(MyThemes.darkBluish)
+                              .xl2
+                              .make(),
+                          catalog.desc.text.caption(context).bold.make(),
+                          10.heightBox,
+                          catalog.det.text.caption(context).make().px16(),
+                        ],
+                      ).py64(),
+                    ),
+                  ),
                 ),
               ),
             ),

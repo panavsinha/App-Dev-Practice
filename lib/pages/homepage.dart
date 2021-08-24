@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:flutter_practice/models/catalog.dart';
 import 'package:flutter_practice/pages/main.dart';
+import 'package:flutter_practice/utils/routes.dart';
 // ignore: unused_import
 import 'package:flutter_practice/widgets/drawer.dart';
 import 'package:flutter_practice/widgets/home_widgets/catalog_header.dart';
@@ -43,6 +45,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyThemes.creamColor,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+        backgroundColor: MyThemes.darkBluish,
+        child: Icon(
+          CupertinoIcons.cart,
+        ),
+      ),
       // appBar: AppBar(
       //   title: Text(
       //     "Catalog App",
