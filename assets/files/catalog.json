@@ -3,6 +3,7 @@
             "id": 1,
             "name": "iPhone 12 Pro",
             "desc": "Apple iPhone 12th Generation",
+            "det": "The iPhone 12 Pro is here, and after living with it for a fairly decent amount of time, I think it's time to answer that one burning question — is it worth it? Apple has made choosing between iPhone models even tougher this year by introducing four new models, all sharing similar specifications and features, but at vastly different prices.",
             "price": 999,
             "color": "#33505a",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"
@@ -11,6 +12,7 @@
             "id": 2,
             "name": "Pixel 5",
             "desc": "Google Pixel 5th Generation",
+            "det": "Google Pixel 5 mobile was launched on 30th September 2020. The phone comes with a 6.00-inch touchscreen display with a resolution of 1080x2340 pixels at a pixel density of 432 pixels per inch (ppi) and an aspect ratio of 19.5:9. Google Pixel 5 is powered by a 1.8GHz octa-core Qualcomm Snapdragon 765G processor. It comes with 8GB of RAM. ",
             "price": 699,
             "color": "#00ac51",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0JhwLvm_uLDLc-la7hK9WyVpe9naJFcebKfhcICiq2KtvXDePNAU_9QO06LPcQ0K0fLByc7m&usqp=CAc"
@@ -19,6 +21,7 @@
             "id": 3,
             "name": "M1 Macbook Air",
             "desc": "Apple M1 Macbook Air",
+            "det": "The new Apple MacBook Air, MacBook Pro, and Mac mini with the Apple M1 SoC have kickstarted the company's multi-year transition from Intel CPUs to its own in-house silicon. Apple's previous pivotal computing shift came about 15 years ago when it announced its transition from the PowerPC architecture to Intel CPUs, and now it's doing it again. This move was a long time coming, and a necessary one since it allows Apple greater control over the design and performance of its Mac computers. ",
             "price": 1099,
             "color": "#e0bfae",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
@@ -27,6 +30,7 @@
             "id": 4,
             "name": "Playstation 5",
             "desc": "Sony Playstation 5th generation",
+            "det": "The PS5 is capable of native 4K resolution gaming at 60 frames per second (fps), though it seems that most first-party Sony titles won't bother with the latter. Sony says you can even go up to 8K or 120fps, assuming you've the hardware to carry it. Still, the PlayStation 5 is going to offer better graphics and more consistent performance than the PS4 era.",
             "price": 499,
             "color": "#544ee4",
             "image": "https://rukminim1.flixcart.com/image/832/832/kj7gwi80/gamingconsole/t/v/v/cfi-1008a01r-825-sony-no-original-imafytxe7twjskbx.jpeg?q=70"
@@ -35,6 +39,7 @@
             "id": 5,
             "name": "Airpods Pro",
             "desc": "Apple Aipods Pro First generation",
+            "det": "AirPods Pro have been designed to deliver Active Noise Cancellation for immersive sound, Transparency mode so you can hear your surroundings and a customisable fit for all-day comfort. Just like AirPods, AirPods Pro connect like magic to your iPhone or Apple Watch. And they're ready to use straight out of the case.",
             "price": 199,
             "color": "#e3e4e9",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROEs084z65psoo06zYl5R0tUzywOVKVQZzmzqCj3PDP1vVJTWv3gGwGMFENSy4qV4n7sEQjE&usqp=CAc"
@@ -43,6 +48,7 @@
             "id": 6,
             "name": "iPad Pro",
             "desc": "Apple iPad Pro 2020 edition",
+            "det": "Apple iPad Pro (12.9-inch) 2020 Wi-Fi tablet was launched on 18th March 2020. The tablet comes with a 12.90-inch touchscreen display with a resolution of 2732x2048 pixels at a pixel density of 264 pixels per inch (ppi). Apple iPad Pro (12.9-inch) 2020 Wi-Fi is powered by an octa-core Apple A12Z Bionic processor.",
             "price": 799,
             "color": "#f73984",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNzUeRQ5uH7E3hpECib8qxdhfHv6SnUGT7mOsew_xiOoqRR7ZpdH-TQ4J6-HuIEfqHimYyPXWH&usqp=CAc"
@@ -51,6 +57,7 @@
             "id": 7,
             "name": "Galaxy S21 Ultra",
             "desc": "Samsung Galaxy S21 Ultra 2021 edition",
+            "det": "The Samsung Galaxy S21 Ultra 5G is the company's most premium smartphone yet, with a strong focus on cameras. Just like the Galaxy S20 Ultra (Review), this new model boasts of 100X “space zoom” and 8K video recording, but with an improved shooting experience and even better image quality.",
             "price": 1299,
             "color": "#1c1c1c",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_PZcc0wicVYR992s5QCIDLYy8t-z-9kibTUdWZBN2sd86aaqdAJfhvxAwZNWV9wfdzDikpr1&usqp=CAc"
@@ -59,6 +66,7 @@
             "id": 8,
             "name": "Galaxy S21",
             "desc": "Samsung Galaxy S21 2021 edition",
+            "det": "Earlier this year, Samsung launched three new smartphones comprising its 2021 flagship Galaxy S21 series. The Galaxy S21 Ultra is the top-of-the-line model and showcases some impressive camera hardware, which will appeal to those looking for the ultimate flexibility, no matter the cost. We've already tested the Galaxy S21 Ultra, and we were impressed with it, but it costs over Rs. 1,00,000.",
             "price": 899,
             "color": "#7c95eb",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNHd7FwarbxA1xdMFt24KazjcR4dWPH_t_T5dz4YNK1s7rJAQ8gOIuR_NRw6eeiQgFhbZ9sAN&usqp=CAc"
