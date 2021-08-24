@@ -35,40 +35,41 @@ class CatalogItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return VxBox(
-        child: Row(
-      children: [
-        Hero(
-          tag: Key(catalog.id.toString()),
-          child: CatalogImage(
-            image: catalog.image,
+      child: Row(
+        children: [
+          Hero(
+            tag: Key(catalog.id.toString()),
+            child: CatalogImage(
+              image: catalog.image,
+            ),
           ),
-        ),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              catalog.name.text.lg.bold.color(MyThemes.darkBluish).make(),
-              catalog.desc.text.caption(context).make(),
-              ButtonBar(
-                alignment: MainAxisAlignment.spaceBetween,
-                buttonPadding: EdgeInsets.zero,
-                children: [
-                  "\$${catalog.price}".text.bold.xl.make(),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(MyThemes.darkBluish),
-                        shape: MaterialStateProperty.all(StadiumBorder())),
-                    child: "Add to Cart".text.make(),
-                  ),
-                ],
-              ).pOnly(right: 8.5),
-            ],
-          ),
-        )
-      ],
-    )).white.rounded.square(135).make().py8();
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                catalog.name.text.lg.bold.color(context.accentColor).make(),
+                catalog.desc.text.caption(context).make(),
+                ButtonBar(
+                  alignment: MainAxisAlignment.spaceBetween,
+                  buttonPadding: EdgeInsets.zero,
+                  children: [
+                    "\$${catalog.price}".text.bold.xl.make(),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(MyThemes.darkBluish),
+                          shape: MaterialStateProperty.all(StadiumBorder())),
+                      child: "Add to Cart".text.make(),
+                    ),
+                  ],
+                ).pOnly(right: 8.5),
+              ],
+            ),
+          )
+        ],
+      ),
+    ).color(context.cardColor).rounded.square(135).make().py8();
   }
 }

@@ -43,7 +43,7 @@ class HomeDetail extends StatelessWidget {
               tag: Key(catalog.id.toString()),
               child: Image.network(
                 catalog.image,
-              ).box.p12.make().card.roundedLg.make(),
+              ).box.color(context.accentColor).p12.make().card.roundedLg.make(),
             ).h32(context),
             Expanded(
               child: Scaffold(
