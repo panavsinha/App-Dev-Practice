@@ -32,7 +32,7 @@ class MyThemes {
           color: Colors.black,
           elevation: 0.0,
           iconTheme: IconThemeData(
-            color: Colors.black,
+            color: Colors.white,
           ),
           textTheme: Theme.of(context).textTheme,
         ),

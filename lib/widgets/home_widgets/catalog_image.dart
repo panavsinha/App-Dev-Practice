@@ -17,10 +17,10 @@ class CatalogImage extends StatelessWidget {
       image,
     )
         .box
-        .color(context.accentColor)
+        .color(Colors.white)
         .rounded
         .p8
-        .color(context.accentColor)
+        .color(Colors.white)
         .make()
         .p16()
         .w32(context);

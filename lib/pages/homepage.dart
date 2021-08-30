@@ -11,6 +11,7 @@ import 'package:flutter_practice/widgets/home_widgets/catalog_header.dart';
 // ignore: unused_import
 import 'package:flutter_practice/widgets/item_widget.dart';
 import "package:velocity_x/velocity_x.dart";
+// ignore: unused_import
 import 'package:flutter_practice/widgets/themes.dart';
 import 'package:flutter_practice/widgets/home_widgets/catalog_list.dart';
 
