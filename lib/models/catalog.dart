@@ -1,21 +1,14 @@
 import 'dart:convert';
 
 class CatalogModel {
-  static List<Item> items = [
-    // Item(
-    //   id: 1,
-    //   name: "iPhone 11",
-    //   desc: "Brand new iPhone 11",
-    //   price: 899,
-    //   color: "#33505a",
-    //   image:
-    //       "https://images-na.ssl-images-amazon.com/images/I/71w3oJ7aWyL._SL1500_.jpg",
-    // ),
-  ];
+  static List<Item>? items;
+  static Item getById(int id) =>
+      items!.firstWhere((element) => element.id == id, orElse: null);
+  static Item getByPosition(int pos) => items![pos];
 }
 
 class Item {
-  final num id;
+  final int id;
   final String name;
   final String desc;
   final String det;
@@ -53,7 +46,7 @@ class Item {
   //     };
 
   Item copyWith({
-    num? id,
+    int? id,
     String? name,
     String? desc,
     String? det,
