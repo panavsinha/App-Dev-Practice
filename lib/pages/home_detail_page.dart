@@ -16,9 +16,9 @@ class HomeDetail extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyThemes.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -28,7 +28,7 @@ class HomeDetail extends StatelessWidget {
               onPressed: () {},
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(MyThemes.darkBluish),
+                      MaterialStateProperty.all(context.theme.buttonColor),
                   shape: MaterialStateProperty.all(StadiumBorder())),
               child: "Add to Cart".text.xl.make(),
             ).wh(119, 45),
@@ -43,23 +43,24 @@ class HomeDetail extends StatelessWidget {
               tag: Key(catalog.id.toString()),
               child: Image.network(
                 catalog.image,
-              ).box.color(context.accentColor).p12.make().card.roundedLg.make(),
+              ).box.color(Colors.white).p12.make().card.roundedLg.make(),
             ).h32(context),
             Expanded(
               child: Scaffold(
-                backgroundColor: MyThemes.creamColor,
+                backgroundColor: context.canvasColor,
                 body: SingleChildScrollView(
                   child: VxArc(
+                    //backgroundColor: context.canvasColor,
                     height: 30,
                     arcType: VxArcType.CONVEY,
                     edge: VxEdge.TOP,
                     child: Container(
-                      color: Colors.white,
+                      color: context.cardColor,
                       width: context.screenWidth,
                       child: Column(
                         children: [
                           catalog.name.text.lg.bold
-                              .color(MyThemes.darkBluish)
+                              .color(context.accentColor)
                               .xl2
                               .make(),
                           catalog.desc.text.caption(context).bold.make(),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 //import 'package:flutter/gestures.dart';
 //import 'package:flutter_practice/pages/loginpage.dart';
 import 'package:flutter_practice/utils/routes.dart';
+import 'package:flutter_practice/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class RegPage extends StatefulWidget {
   @override
@@ -36,7 +38,7 @@ class _RegPageState extends State<RegPage> {
         }
       },
       child: Material(
-        color: Colors.white,
+        color: context.canvasColor,
         child: SingleChildScrollView(
           child: Form(
             key: _formKey,

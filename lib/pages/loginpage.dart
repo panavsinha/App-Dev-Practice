@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_practice/pages/register.dart';
 import 'package:flutter_practice/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_practice/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -37,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
         }
       },
       child: Material(
-        color: Colors.white,
+        color: context.canvasColor,
         child: SingleChildScrollView(
           child: Form(
             key: _formKey,
@@ -97,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 20.0,
                       ),
                       Material(
-                        color: Colors.deepPurple,
+                        color: context.theme.buttonColor,
                         borderRadius:
                             BorderRadius.circular(changeButton ? 20 : 10),
                         child: InkWell(
@@ -128,14 +130,14 @@ class _LoginPageState extends State<LoginPage> {
                     text: "If you don't have an account, click on ",
                     style: GoogleFonts.lato(
                       fontSize: 15.0,
-                      color: Colors.black,
+                      color: context.accentColor,
                     ),
                     children: <TextSpan>[
                       TextSpan(
                         text: "Register",
                         style: GoogleFonts.lato(
                           decoration: TextDecoration.underline,
-                          color: Colors.deepPurple,
+                          color: Colors.indigo,
                           fontSize: 15.0,
                         ),
                         recognizer: TapGestureRecognizer()
