@@ -5,7 +5,7 @@ Some glimpses are:
   <img src="https://user-images.githubusercontent.com/72135200/131537290-543cc8aa-4797-4969-a296-f06f5d7e8f47.png" width="150" title="Register Page"><br/>
   <img src="https://user-images.githubusercontent.com/72135200/131371017-242a4bbb-51e9-4c37-a456-7b508bf990f8.png" width="150" title="Homepage"><br/>
 </p>
-List of features:<br/>
+Intended features:<br/>
 1. Login Page for existing users (Checks for password length and username included)<br/>
 2. Register Page for new users (Checks for password length and username included)<br/>
 3. Drawer - To see the name, e-mail ID of the logged in user, settings, etc.<br/>
