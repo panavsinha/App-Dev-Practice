@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:flutter_practice/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -36,10 +37,18 @@ class _CartTotal extends StatelessWidget {
           "\$999".text.xl2.color(context.theme.accentColor).make(),
           30.widthBox,
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: "Buying not Supported".text.make(),
+                ),
+              );
+            },
             style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(context.theme.buttonColor)),
+              shape: MaterialStateProperty.all(StadiumBorder()),
+              backgroundColor:
+                  MaterialStateProperty.all(context.theme.buttonColor),
+            ),
             child: "Buy".text.color(Colors.white).make(),
           ).w32(context),
         ],
