@@ -10,7 +10,7 @@ List of features:<br/>
 2. Register Page for new users (Checks for password length and username included)<br/>
 3. Drawer - To see the name, e-mail ID of the logged in user, settings, etc.<br/>
 4. Add to Cart option<br/>
-5. Checkout option from the cart<br/>
+5. Checkout option from the cart<br/><br/>
 Dark mode is also supported by the application.<br/>
 
 I enjoyed making this a lot, primarily because I was learning something new.<br/>
