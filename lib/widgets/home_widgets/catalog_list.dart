@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/models/cart.dart';
 import 'package:flutter_practice/models/catalog.dart';
 import 'package:flutter_practice/pages/home_detail_page.dart';
 import 'package:flutter_practice/widgets/themes.dart';
@@ -55,13 +56,8 @@ class CatalogItem extends StatelessWidget {
                   buttonPadding: EdgeInsets.zero,
                   children: [
                     "\$${catalog.price}".text.bold.xl.make(),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(MyThemes.darkBluish),
-                          shape: MaterialStateProperty.all(StadiumBorder())),
-                      child: "Add to Cart".text.make(),
+                    AddToCart(
+                      catalog: catalog,
                     ),
                   ],
                 ).pOnly(right: 8.5),
@@ -71,5 +67,37 @@ class CatalogItem extends StatelessWidget {
         ],
       ),
     ).color(context.cardColor).rounded.square(135).make().py8();
+  }
+}
+
+class AddToCart extends StatefulWidget {
+  final Item catalog;
+  const AddToCart({
+    Key? key,
+    required this.catalog,
+  }) : super(key: key);
+
+  @override
+  _AddToCartState createState() => _AddToCartState();
+}
+
+class _AddToCartState extends State<AddToCart> {
+  bool Added = false;
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Added = Added.toggle();
+        final _catalog = CatalogModel();
+        final _cart = Cart();
+        _cart.catalog = _catalog;
+        _cart.add(widget.catalog);
+        setState(() {});
+      },
+      style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(MyThemes.darkBluish),
+          shape: MaterialStateProperty.all(StadiumBorder())),
+      child: Added ? Icon(Icons.done) : "Add to Cart".text.make(),
+    );
   }
 }
