@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_practice/pages/register.dart';
 import 'package:flutter_practice/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
+// ignore: unused_import
 import 'package:flutter_practice/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
