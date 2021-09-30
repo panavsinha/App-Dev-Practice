@@ -1,4 +1,4 @@
-A catalog app made using Flutter and frameworks like VelocityX.
+A catalog app made using Flutter and packages like VelocityX.
 Some glimpses are:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/72135200/131370984-d75ea1d2-78cd-4707-8f17-d6fd091dc4d0.png" width="150" title="Login Page"><br/>
